@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+}
+
+.column {
+    float: left;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.column img {
+    margin-top: 5px;
+}
+
+.row:after {
+    content: "";
+    display: block;
+    clear: both;
+}
