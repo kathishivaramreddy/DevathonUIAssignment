@@ -1,6 +1,7 @@
 import React from 'react';
 import allProducts from './allProducts';
 import {ProductDetails} from "./ProductDetails";
+import {ProductVariation} from "./ProductVariation";
 import './ProductList.css'
 
 export class ProductList extends React.Component{
@@ -12,9 +13,11 @@ export class ProductList extends React.Component{
             productId:1,
             top:0,
             left:0,
+            addVariation:false,
         }
         this.openProductBox = this.openProductBox.bind(this)
         this.closeProductBox = this.closeProductBox.bind(this)
+        this.addVariation = this.addVariation.bind(this)
     }
 
     openProductBox(id){
@@ -28,6 +31,10 @@ export class ProductList extends React.Component{
 
     closeProductBox(){
         this.setState({showDetails:false})
+    }
+
+    addVariation(){
+        this.setState({addVariation:true})
     }
 
     render(){
@@ -54,7 +61,7 @@ export class ProductList extends React.Component{
 
                     <div className="column2 variation">
                         <div className="varbutton">
-                            <button >+</button>
+                            <button onClick={this.addVariation}>+</button>
                             <pre>
                                 Have variations to your product<br/>
                                 like size,color and more
@@ -62,6 +69,9 @@ export class ProductList extends React.Component{
                         </div>
                         <div className="submitimage" onClick={this.closeProductBox}>
                             <img src={require('./images/submit.png')}/>
+                        </div>
+                        <div className="addVariation">
+                            {this.state.addVariation && <ProductVariation/>}
                         </div>
                     </div>
 
@@ -72,7 +82,7 @@ export class ProductList extends React.Component{
             <div>
                 {productList}
                 {this.state.showDetails && productDetails}
-                </div>
+            </div>
         )
     }
 }
