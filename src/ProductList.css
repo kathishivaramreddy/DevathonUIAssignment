@@ -23,7 +23,7 @@
     position: absolute;
     z-index: 1;
     width: 66%;
-    height: auto;
+    height: 110%;
     overflow: auto;
     background-color: white;
     border-style: solid;
@@ -32,7 +32,7 @@
 }
 
 .overlay{
-    animation: fadeIn 2.5s
+    animation: fadeIn 1.5s
 }
 
 .column2{
@@ -48,26 +48,79 @@
 .productimage{
     width :45%;
 }
+
+/*.productdetails img{*/
+    /*width: 200px;*/
+    /*height: 200px;*/
+/*}*/
 .details{
     width :45%;
+    text-align: left;
+    color:lightgray;
+    line-height: 6px;
 }
+
 .dragdrop{
     width:50%;
 }
 .variation{
-    width:50%;
-    margin-top: 20%;
+    box-sizing: border-box;
+    height: 415px;
+    width: 50%;
+    position: relative;
+    color: lightgray;
 }
 
+.varbutton{
+    position: absolute;
+    top: 30%;
+    left:10%;
+    color: darkgray;
+}
+.submitimage {
+    position: absolute;
+    top:90%;
+    left:94%;
+    /*width: auto;*/
+    /*height:auto;*/
+}
 button{
-    width: 40px;
-    height: 40px;
-    font-size: 20px;
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    color: darkgray;
 }
 input{
     border: none;
+    height:30px;
+    margin-top: 12px;
+    width:100%;
+    boder:none;
+    boder-style:none;
+    font-size: 20px;
+    color:darkgray;
 }
+hr{
+    border-color: lightgrey;
+    border-style:solid;
+}
+label{
+    font-size: 15px;
 
+}
+p{
+    font-size: 25px;
+    color:black;
+}
+select{
+    width: 100%;
+    margin-top: 12px;
+    border:none;
+    background: none;
+    border-style: none;
+    font-size: 20px;
+    color: lightgrey;
+}
 @keyframes fadeIn {
     from {opacity: 0;}
     to {opacity:1 ;}

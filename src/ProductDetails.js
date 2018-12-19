@@ -4,28 +4,29 @@ export class ProductDetails extends React.Component {
 
     render() {
         return(
-        <div className="column2 details">
-            Product Title
+        <form className="column2 details">
+            <label>Product Title</label>
             <p>{this.props.product.title}</p>
             <hr/>
-            Price
-            <p>{this.props.product.price}</p>
+            <label>Price</label>
+            <p>&#8377; {this.props.product.price}</p>
             <hr/>
-            Offer Price<br/>
+            <label>Offer Price</label><br/>
+            <br/>
             <input type="text" defaultValue="Enter Offer Price"></input><br/>
             <hr/>
-            Shipping Cost
-            <p>0</p>
+            <label>Shipping Cost</label>
+            <p>&#8377; 0</p>
             <hr/>
-            Inventory<br/>
+            <label>Inventory</label><br/>
             <select>
                 <option value="1">1</option>
                 <option value="2">2</option>
             </select>
             <hr/>
-            Description<br/>
+            <label>Description</label><br/>
             <input type="text" defaultValue="Enter Description For Product"></input><br/>
-        </div>
+        </form>
         )
     }
 }

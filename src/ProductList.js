@@ -49,13 +49,20 @@ export class ProductList extends React.Component{
                     <div className="column2 dragdrop">
                         <img className="imageupload" src={require(`./images/draganddrop.png`)} alt="uploadimage" />
                     </div>
+
                     <ProductDetails product={product}/>
+
                     <div className="column2 variation">
-                        <button>+</button>
-                        <pre>
-                            Have variations to your product<br/>
-                            like size,color and more
-                        </pre>
+                        <div className="varbutton">
+                            <button >+</button>
+                            <pre>
+                                Have variations to your product<br/>
+                                like size,color and more
+                            </pre>
+                        </div>
+                        <div className="submitimage" onClick={this.closeProductBox}>
+                            <img src={require('./images/submit.png')}/>
+                        </div>
                     </div>
 
                 </div>
@@ -65,8 +72,6 @@ export class ProductList extends React.Component{
             <div>
                 {productList}
                 {this.state.showDetails && productDetails}
-                {/*<ImageDragDrop/>*/}
-
                 </div>
         )
     }
