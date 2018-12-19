@@ -1,6 +1,6 @@
 import React from 'react';
 import allProducts from './allProducts';
-import {ImageDragDrop} from "./ImageDragDrop";
+import {ProductDetails} from "./ProductDetails";
 import './ProductList.css'
 
 export class ProductList extends React.Component{
@@ -33,12 +33,23 @@ export class ProductList extends React.Component{
             .map( product =>
               <div className="overlay">
                 <div className="productdetails">
+
                     <div className="column2">
                         <img className="product" src={require(`./images/${product.image}`)} alt="productimage"/>
                     </div>
+
                     <div className="column2">
                         <img className="imageupload" src={require(`./images/draganddrop.png`)} alt="uploadimage" />
                     </div>
+                    <ProductDetails product={product}/>
+                    <div className="column2 variation">
+                        <button>+</button>
+                        <pre>
+                            Have variations to your product<br/>
+                            like size,color and more
+                        </pre>
+                    </div>
+
                 </div>
               </div>)
 

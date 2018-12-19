@@ -1,17 +1,12 @@
 const allProducts = () => {
     return {
-        products : [{productid:1,image:"1.jpeg"},
-                    {productid:2,image:"1.jpeg"},
-                    {productid:3,image:"1.jpeg"},
-                    {productid:4,image:"1.jpeg"},
-                    {productid:5,image:"1.jpeg"},
-                    {productid:6,image:"1.jpeg"},
-                    {productid:7,image:"1.jpeg"},
-                    {productid:8,image:"1.jpeg"},
-                    {productid:9,image:"1.jpeg"},
-                    {productid:10,image:"1.jpeg"},
-                    {productid:11,image:"1.jpeg"},
-                    {productid:12,image:"1.jpeg"}]
+        products : [{productid:1,image:"1.jpeg",title:"Silk Saree",price:1200},
+                    {productid:2,image:"1.jpeg",title:"Cotton Saree",price:1400},
+                    {productid:3,image:"1.jpeg",title:"Georgette Saree",price:1800},
+                    {productid:4,image:"1.jpeg",title:"Embellished Saree",price:2000},
+                    {productid:5,image:"1.jpeg",title:"Royal Saree",price:1000},
+                    {productid:6,image:"1.jpeg",title:"Rajput Saree",price:1500},
+                    ]
     }
 }
 
