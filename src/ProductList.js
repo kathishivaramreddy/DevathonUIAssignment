@@ -1,5 +1,6 @@
 import React from 'react';
-import allProducts from './allProducts'
+import allProducts from './allProducts';
+import {ImageDragDrop} from "./ImageDragDrop";
 import './ProductList.css'
 
 export class ProductList extends React.Component{
@@ -23,21 +24,31 @@ export class ProductList extends React.Component{
     }
 
     render(){
-        console.log(this.state.showDetails,this.state.productId)
         const productList = allProducts().products.map( product =>
             <div className="column" onClick={() => this.openProductBox(product.productid)}>
-            <img className="product" src={require(`./images/${product.image}`)} alt="productimage"/>
+                <img className="product" src={require(`./images/${product.image}`)} alt="productimage"/>
             </div>)
 
         const productDetails= allProducts().products.filter(product => product.productid === this.state.productId)
-            .map( product => <div className="productdetails">
-                <img className="product" src={require(`./images/${product.image}`)} alt="productimage"/>
-            </div>)
+            .map( product =>
+              <div className="overlay">
+                <div className="productdetails">
+                    <div className="column2">
+                        <img className="product" src={require(`./images/${product.image}`)} alt="productimage"/>
+                    </div>
+                    <div className="column2">
+                        <img className="imageupload" src={require(`./images/draganddrop.png`)} alt="uploadimage" />
+                    </div>
+                </div>
+              </div>)
+
         return(
-            <div className="productDetails">
+            <div>
                 {productList}
                 {this.state.showDetails && productDetails}
-            </div>
+                {/*<ImageDragDrop/>*/}
+
+                </div>
         )
     }
 }
